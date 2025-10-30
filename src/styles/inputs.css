@@ -1,0 +1,77 @@
+/* Global input styling for dark theme visibility */
+input,
+textarea,
+select {
+  color-scheme: light dark;
+}
+
+/* Light theme (default) */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  color: rgb(15, 23, 42); /* slate-900 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(100, 116, 139); /* slate-400 */
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="date"],
+  input[type="time"],
+  textarea,
+  select {
+    color: rgb(226, 232, 240); /* slate-100 */
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgb(100, 116, 139); /* slate-500 */
+  }
+}
+
+/* Ensure backgrounds are visible */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  background-color: white;
+  border-color: rgb(203, 213, 225); /* slate-300 */
+}
+
+@media (prefers-color-scheme: dark) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="date"],
+  input[type="time"],
+  textarea,
+  select {
+    background-color: rgb(15, 23, 42); /* slate-900 */
+    border-color: rgb(51, 65, 85); /* slate-700 */
+  }
+}
